@@ -19,7 +19,7 @@ export const Home = () => {
   const [posts, setPosts] = useState([]);
   const [allPosts, setAllPosts] = useState([]);
   const [page, setPage] = useState(0);
-  const [postsPerPage, setpostsPerPage] = useState(4);
+  const [postsPerPage, setpostsPerPage] = useState(10);
   const [searchValue, setSearchValue] = useState('');
 
   // const { posts, page, postsPerPage, allPosts, searchValue } = this.state;
