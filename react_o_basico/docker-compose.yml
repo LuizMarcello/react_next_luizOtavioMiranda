@@ -1,0 +1,19 @@
+services:
+  react-project:
+    container_name: react-project
+    image: react-project-image
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/react-project
+      - /react-project/node_modules
+    command: npm run dev
+    networks: # Associa o serviço à rede personalizada
+      - external_network
+
+networks: # Define a rede personalizada
+  external_network:
+    driver: bridge 
