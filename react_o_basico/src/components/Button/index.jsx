@@ -1,5 +1,8 @@
+import React from 'react';
 import './styles.css'
 import { Component } from 'react';
+import PropTypes from 'prop-types';
+
 /* No caso de classes, as props já são passadas implicitamente. */
 export class Button extends Component {
     render() {
@@ -17,3 +20,13 @@ export class Button extends Component {
 }
 
 export default Button;
+
+Button.defaultProps = {
+    disabled: false,
+}
+
+Button.propTypes = {
+    text: PropTypes.string.isRequired,
+    onnClick: PropTypes.func.isRequired,
+    disabled: PropTypes.bool,
+}

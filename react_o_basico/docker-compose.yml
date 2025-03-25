@@ -9,11 +9,10 @@ services:
       - "5173:5173"
     volumes:
       - .:/react-project
-      - /react-project/node_modules
-    command: npm run dev
-    networks: # Associa o serviço à rede personalizada
-      - external_network
+    command: npm run dev -- --host 0.0.0.0
+  
+      
 
-networks: # Define a rede personalizada
-  external_network:
-    driver: bridge 
+
+
+     
